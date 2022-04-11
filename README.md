@@ -5,6 +5,7 @@ using namespace std;
  /*
   * Node Declaration
   */
+ 
  struct node
  {     
    int info;
@@ -13,9 +14,6 @@ using namespace std;
  }
  *root;
   
- /*
-  * Class Declaration
-  */
  class BST
  {
      public:
@@ -33,9 +31,7 @@ using namespace std;
              root = NULL;
          }
  };
- /*
-  * Main Contains Menu
-  */
+ 
  int main()
  {
      int choice, num;
@@ -90,10 +86,6 @@ using namespace std;
       while(choice!=6);
  }
 
-  
- /*
-   Find Element in the Tree
-  */
  void BST::find(int item, node par, node loc)
  {
      node *ptr, *ptrsave;
@@ -131,10 +123,7 @@ using namespace std;
      *loc = NULL;
      *par = ptrsave;
  }
-  
- /*
-  * Inserting Element into the Tree
-  */
+ 
  void BST::insert(node *tree, node *newnode)
  {
      if (root == NULL)
@@ -175,16 +164,15 @@ using namespace std;
          else
          {
              tree->right = newnode;
-
-> Sahil Songire:
-(tree->right)->left = NULL;
+ 
+             (tree->right)->left = NULL;
              (tree->right)->right = NULL;
              cout<<"Node Added To Right"<<endl;
              return;
          } 
      }
  }
-  
+   
  /*
   * Case A
   */
@@ -228,6 +216,7 @@ using namespace std;
  /*
   * Case C
   */
+ 
  void BST::case_c(node *par, node *loc)
  {
      node *ptr, *ptrsave, *suc, *parsuc;
